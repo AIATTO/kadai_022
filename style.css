@@ -1,3 +1,14 @@
+h1,
+p,
+body {
+  margin: 0px;
+}
+
+a,
+p {
+  font-size: 20px;
+}
+
 body {
   text-align: center;
   margin: 0px;
@@ -6,27 +17,22 @@ body {
 h1 {
   text-align: center;
   color: rgb(255, 255, 255);
-  margin: 0px;
+  margin: 0 0 20px;
   background-color: rgb(244, 79, 79);
   font-size: 20px;
 }
+main {
+  padding: 10px;
+}
 
 h2::before {
-  text-align: center;
-  margin: 0px;
   content: "●";
   color: rgb(239, 111, 139);
-  font-size: 25;
 }
 
 h2 {
+  font-size: 25px;
   border-bottom: dotted 3px rgb(236, 122, 122);
-}
-
-p:nth-of-type(2)::first-letter {
-  color: rgb(97, 206, 249);
-  font-weight: bold;
-  font-size: 20px;
 }
 
 p {
@@ -37,33 +43,52 @@ p {
   font-size: 20px;
 }
 
-div {
-  border: solid 3px rgb(238, 204, 204);
-  flex-basis: 25%;
+p:nth-of-type(2)::first-letter {
+  color: rgb(97, 206, 249);
+  font-weight: bold;
+}
+
+footer {
+  background-color: rgb(244, 79, 79);
   text-align: center;
 }
 
 footer a:visited {
-  text-align: center;
-  background-color: rgb(244, 79, 79);
+  color: rgb(193, 7234, 251);
 }
 
-footer a:hover {
-  text-align: center;
-  background-color: rgb(244, 79, 79);
-}
-
-a {
+footer a {
   color: rgb(255, 255, 255);
+}
+footer a:hover {
+  color: rgb(245, 178, 168);
 }
 
 #parent {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 5px;
 }
 
-#contents {
-  padding: 5px;
+.contents {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+  #parent {
+    flex-direction: column;
+  }
 }
